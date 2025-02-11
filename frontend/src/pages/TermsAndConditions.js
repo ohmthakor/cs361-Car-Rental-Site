@@ -1,7 +1,10 @@
 // frontend/src/pages/TermsAndConditions.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TermsAndConditions() {
+  const navigate = useNavigate();
+
   return (
     <div className="terms-container">
       <h1 className="page-header">Terms & Conditions</h1>
@@ -20,6 +23,12 @@ function TermsAndConditions() {
       <p>
         Thank you for choosing Ohm's Car Rentals. We hope you have a safe and enjoyable journey!
       </p>
+      {/* Back Button using history to preserve state */}
+      <div style={{ marginTop: '20px' }}>
+        <button onClick={() => navigate(-1)} className="btn">
+          Back to Checkout
+        </button>
+      </div>
     </div>
   );
 }
