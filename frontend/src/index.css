@@ -1,0 +1,122 @@
+/* Import the bold, modern Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #f1f1f1; /* Light text for contrast */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #14213d; /* Deep blue */
+  color: #f1f1f1;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Page Header & Tagline */
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #fca311; /* Accent color */
+}
+
+/* Car Card Styles */
+.car-card {
+  background-color: #1f1f1f; /* Slightly lighter dark for cards */
+  border: 1px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.car-card-content {
+  padding: 15px;
+}
+
+.car-card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.car-card-text {
+  margin-bottom: 5px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #fca311; /* Accent color */
+  color: #121212;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #e5a00d;
+}
+
+/* Form Styles */
+input, select, button {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 1em;
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

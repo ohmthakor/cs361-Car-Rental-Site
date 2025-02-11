@@ -1,0 +1,76 @@
+[
+    {
+      "id": 1,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2022,
+      "bodyStyle": "Sedan",
+      "dailyCost": 40,
+      "imageUrl": "/images/toyota-corolla.png"
+    },
+    {
+      "id": 2,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2022,
+      "bodyStyle": "Sedan",
+      "dailyCost": 45,
+      "imageUrl": "/images/honda-civic.png"
+    },
+    {
+      "id": 3,
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2023,
+      "bodyStyle": "Coupe",
+      "dailyCost": 100,
+      "imageUrl": "/images/ford-mustang.jpeg"
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "3 Series",
+      "year": 2022,
+      "bodyStyle": "Sedan",
+      "dailyCost": 120,
+      "imageUrl": "/images/bmw-3series.png"
+    },
+    {
+      "id": 5,
+      "brand": "Honda",
+      "model": "Accord",
+      "year": 2024,
+      "bodyStyle": "Sedan",
+      "dailyCost": 55,
+      "imageUrl": "/images/honda-accord.webp"
+    },
+    {
+        "id": 6,
+        "brand": "Mercedes",
+        "model": "G Class",
+        "year": 2024,
+        "bodyStyle": "SUV",
+        "dailyCost": 150,
+        "imageUrl": "/images/mercedes-g-class.avif"
+    },
+    {
+        "id": 7,
+        "brand": "Audi",
+        "model": "A5 Cabriolet",
+        "year": 2024,
+        "bodyStyle": "Convertible",
+        "dailyCost": 130,
+        "imageUrl": "/images/audi-a5.webp"
+    },
+    {
+        "id": 8,
+        "brand": "Tesla",
+        "model": "Model 3",
+        "year": 2024,
+        "bodyStyle": "Sedan",
+        "dailyCost": 105,
+        "imageUrl": "/images/tesla-3.webp"
+    }
+
+]
+  
