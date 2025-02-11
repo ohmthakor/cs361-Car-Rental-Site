@@ -1,1 +1,2 @@
-# cs361
+# cs361 Car Rental Website
+
