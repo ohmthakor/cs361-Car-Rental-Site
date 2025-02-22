@@ -24,24 +24,27 @@ function CheckoutPage() {
       alert("Please accept the terms & conditions to proceed.");
       return;
     }
-    // Process the booking here (e.g., send data to the backend)
     alert(`Booking confirmed for ${fullName}!`);
     navigate('/');
   };
 
+  const handleGoBack = () => {
+    const confirmLeave = window.confirm("Are you sure you want to leave? Your booking details will be lost.");
+    if (confirmLeave) {
+      navigate(-1);
+    }
+  };
+
   return (
     <div className="checkout-page">
-      {/* Banner */}
       <h1 className="page-header">Before We Give You The Keys</h1>
 
-      {/* Booking Summary */}
       <div className="booking-summary">
         <p><strong>Car:</strong> {bookingDetails.carName}</p>
         <p><strong>Rental Duration:</strong> {bookingDetails.rentalDuration} days</p>
         <p><strong>Total Cost:</strong> ${bookingDetails.totalCost}</p>
       </div>
 
-      {/* Flex container for form and rental policy */}
       <div
         className="checkout-content"
         style={{
@@ -51,7 +54,6 @@ function CheckoutPage() {
           flexWrap: 'wrap'
         }}
       >
-        {/* Customer Details Form */}
         <div className="checkout-form" style={{ flex: 1, minWidth: '300px' }}>
           <form onSubmit={handleSubmit}>
             <div>
@@ -111,13 +113,12 @@ function CheckoutPage() {
             </button>
           </form>
           <div style={{ marginTop: '20px' }}>
-            <button onClick={() => navigate(-1)} className="btn">
+            <button onClick={handleGoBack} className="btn">
               Go Back
             </button>
           </div>
         </div>
 
-        {/* Rental Policy Section (displayed to the right of the form) */}
         <div className="rental-policy" style={{ flex: 1, minWidth: '300px' }}>
           <h2>Rental Policy</h2>
           <ul>
