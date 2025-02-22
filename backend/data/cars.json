@@ -1,76 +1,98 @@
 [
-    {
-      "id": 1,
-      "brand": "Toyota",
-      "model": "Corolla",
-      "year": 2022,
-      "bodyStyle": "Sedan",
-      "dailyCost": 40,
-      "imageUrl": "/images/toyota-corolla.png"
-    },
-    {
-      "id": 2,
-      "brand": "Honda",
-      "model": "Civic",
-      "year": 2022,
-      "bodyStyle": "Sedan",
-      "dailyCost": 45,
-      "imageUrl": "/images/honda-civic.png"
-    },
-    {
-      "id": 3,
-      "brand": "Ford",
-      "model": "Mustang",
-      "year": 2023,
-      "bodyStyle": "Coupe",
-      "dailyCost": 100,
-      "imageUrl": "/images/ford-mustang.jpeg"
-    },
-    {
-      "id": 4,
-      "brand": "BMW",
-      "model": "3 Series",
-      "year": 2022,
-      "bodyStyle": "Sedan",
-      "dailyCost": 120,
-      "imageUrl": "/images/bmw-3series.png"
-    },
-    {
-      "id": 5,
-      "brand": "Honda",
-      "model": "Accord",
-      "year": 2024,
-      "bodyStyle": "Sedan",
-      "dailyCost": 55,
-      "imageUrl": "/images/honda-accord.webp"
-    },
-    {
-        "id": 6,
-        "brand": "Mercedes",
-        "model": "G Class",
-        "year": 2024,
-        "bodyStyle": "SUV",
-        "dailyCost": 150,
-        "imageUrl": "/images/mercedes-g-class.avif"
-    },
-    {
-        "id": 7,
-        "brand": "Audi",
-        "model": "A5 Cabriolet",
-        "year": 2024,
-        "bodyStyle": "Convertible",
-        "dailyCost": 130,
-        "imageUrl": "/images/audi-a5.webp"
-    },
-    {
-        "id": 8,
-        "brand": "Tesla",
-        "model": "Model 3",
-        "year": 2024,
-        "bodyStyle": "Sedan",
-        "dailyCost": 105,
-        "imageUrl": "/images/tesla-3.webp"
-    }
-
+  {
+    "id": 1,
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2022,
+    "bodyStyle": "Sedan",
+    "dailyCost": 40,
+    "imageUrl": "/images/toyota-corolla.png",
+    "description": "A reliable and fuel-efficient sedan, perfect for daily commutes.",
+    "drivetrain": "FWD",
+    "averageMPG": 32
+  },
+  {
+    "id": 2,
+    "brand": "Honda",
+    "model": "Civic",
+    "year": 2022,
+    "bodyStyle": "Sedan",
+    "dailyCost": 45,
+    "imageUrl": "/images/honda-civic.png",
+    "description": "A sporty and stylish sedan with excellent handling and comfort.",
+    "drivetrain": "FWD",
+    "averageMPG": 34
+  },
+  {
+    "id": 3,
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 2023,
+    "bodyStyle": "Coupe",
+    "dailyCost": 100,
+    "imageUrl": "/images/ford-mustang.jpeg",
+    "description": "A powerful and iconic muscle car for a thrilling driving experience.",
+    "drivetrain": "RWD",
+    "averageMPG": 22
+  },
+  {
+    "id": 4,
+    "brand": "BMW",
+    "model": "3 Series",
+    "year": 2022,
+    "bodyStyle": "Sedan",
+    "dailyCost": 120,
+    "imageUrl": "/images/bmw-3series.png",
+    "description": "A luxury sedan with high-end features and sporty performance.",
+    "drivetrain": "AWD",
+    "averageMPG": 30
+  },
+  {
+    "id": 5,
+    "brand": "Honda",
+    "model": "Accord",
+    "year": 2024,
+    "bodyStyle": "Sedan",
+    "dailyCost": 55,
+    "imageUrl": "/images/honda-accord.webp",
+    "description": "A spacious and comfortable sedan with advanced safety features.",
+    "drivetrain": "FWD",
+    "averageMPG": 33
+  },
+  {
+    "id": 6,
+    "brand": "Mercedes",
+    "model": "G Class",
+    "year": 2024,
+    "bodyStyle": "SUV",
+    "dailyCost": 150,
+    "imageUrl": "/images/mercedes-g-class.avif",
+    "description": "A rugged yet luxurious SUV designed for all terrains.",
+    "drivetrain": "4WD",
+    "averageMPG": 14
+  },
+  {
+    "id": 7,
+    "brand": "Audi",
+    "model": "A5 Cabriolet",
+    "year": 2024,
+    "bodyStyle": "Convertible",
+    "dailyCost": 130,
+    "imageUrl": "/images/audi-a5.webp",
+    "description": "A stylish convertible perfect for enjoying the open road.",
+    "drivetrain": "AWD",
+    "averageMPG": 27
+  },
+  {
+    "id": 8,
+    "brand": "Tesla",
+    "model": "Model 3",
+    "year": 2024,
+    "bodyStyle": "Sedan",
+    "dailyCost": 105,
+    "imageUrl": "/images/tesla-3.webp",
+    "description": "An electric sedan with cutting-edge technology and performance.",
+    "drivetrain": "AWD",
+    "averageMPG": "Electric"
+  }
 ]
-  
