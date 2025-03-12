@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import CarReviews from '../components/carReviews'; // <-- Import the CarReviews component
 
 function RentCar() {
   const { id } = useParams();
@@ -57,7 +58,7 @@ function RentCar() {
         />
       </div>
       
-      {/* Right side - Description, MPG, Drivetrain */}
+      {/* Right side - Description, MPG, Drivetrain, and Reviews */}
       <div>
         <p><strong>Description:</strong> {car.description}</p>
         <p><strong>Drivetrain:</strong> {car.drivetrain}</p>
@@ -80,6 +81,15 @@ function RentCar() {
           <button onClick={() => navigate('/browse')} className="btn">
             Go Back to View Other Cars
           </button>
+        </div>
+
+        {/* Reviews Section */}
+        <div style={{ marginTop: '20px' }}>
+          <h2>Customer Reviews</h2>
+          {/* Pass the car model or a unique identifier as a prop */}
+          <CarReviews
+            carModel={`${car.brand.toLowerCase()}-${car.model.toLowerCase().replace(/\s+/g, '-')}`}
+          />
         </div>
       </div>
     </div>
