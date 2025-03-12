@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Coverage",
+    "description": "Covers minor damages with a $500 deductible.",
+    "dailyCost": 10
+  },
+  {
+    "id": 2,
+    "name": "Standard Coverage",
+    "description": "Covers moderate damages with a $250 deductible.",
+    "dailyCost": 20
+  },
+  {
+    "id": 3,
+    "name": "Premium Coverage",
+    "description": "Covers all damages with no deductible.",
+    "dailyCost": 30
+  }
+]

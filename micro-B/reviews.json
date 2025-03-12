@@ -1,0 +1,126 @@
+{
+  "toyota-corolla": [
+    {
+      "rating": 5,
+      "reviewText": "Great car, very reliable and fuel-efficient!"
+    },
+    {
+      "rating": 4,
+      "reviewText": "Comfortable ride with excellent mileage."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Fantastic experience driving the Corolla."
+    },
+    {
+      "rating": 3,
+      "reviewText": "it's ok"
+    }
+  ],
+  "honda-civic": [
+    {
+      "rating": 4,
+      "reviewText": "Sporty and efficient; a joy to drive."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Solid performance and impressive design."
+    },
+    {
+      "rating": 4,
+      "reviewText": "Loved the handling and fuel efficiency."
+    },
+    {
+      "rating": 5,
+      "reviewText": "yygyg"
+    }
+  ],
+  "ford-mustang": [
+    {
+      "rating": 5,
+      "reviewText": "Thrilling performance and unmistakable style!"
+    },
+    {
+      "rating": 4,
+      "reviewText": "A powerful muscle car with a modern touch."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Amazing acceleration and design, truly iconic."
+    }
+  ],
+  "bmw-3-series": [
+    {
+      "rating": 4,
+      "reviewText": "Luxurious and sporty with precise handling."
+    },
+    {
+      "rating": 4,
+      "reviewText": "Well-balanced performance with a premium feel."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Exceptional driving dynamics and comfort."
+    }
+  ],
+  "honda-accord": [
+    {
+      "rating": 5,
+      "reviewText": "Spacious, comfortable, and reliable for daily commutes."
+    },
+    {
+      "rating": 4,
+      "reviewText": "Smooth ride and excellent safety features."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Perfect blend of performance and comfort."
+    }
+  ],
+  "mercedes-g-class": [
+    {
+      "rating": 5,
+      "reviewText": "Luxurious and rugged, perfect for any terrain."
+    },
+    {
+      "rating": 4,
+      "reviewText": "A high-end SUV that stands out on the road."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Outstanding off-road capabilities and refined design."
+    }
+  ],
+  "audi-a5-cabriolet": [
+    {
+      "rating": 4,
+      "reviewText": "A fun and stylish convertible, great for summer drives."
+    },
+    {
+      "rating": 4,
+      "reviewText": "Smooth open-air driving experience with a sporty edge."
+    },
+    {
+      "rating": 5,
+      "reviewText": "Elegant design with impressive performance."
+    }
+  ],
+  "tesla-model-3": [
+    {
+      "rating": 5,
+      "reviewText": "Innovative and eco-friendly with outstanding acceleration."
+    },
+    {
+      "rating": 5,
+      "reviewText": "A glimpse into the future of automotive technology."
+    },
+    {
+      "rating": 4,
+      "reviewText": "Cutting-edge design and impressive range."
+    },
+    {
+      "rating": 1,
+      "reviewText": "Took way too long to charge"
+    }
+  ]
+}
