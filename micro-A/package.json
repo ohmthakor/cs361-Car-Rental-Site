@@ -1,0 +1,17 @@
+{
+  "name": "cs361-microservice",
+  "version": "1.0.0",
+  "description": "Car recommendation microservice implemented by Justin Lee for Ohm Thakor.",
+  "main": "recommendation.js",
+  "scripts": {
+    "start": "node recommendation.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
