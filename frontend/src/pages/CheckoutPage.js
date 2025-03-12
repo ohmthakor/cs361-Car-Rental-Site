@@ -1,6 +1,8 @@
 // frontend/src/pages/CheckoutPage.js
 import React, { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
+import axios from 'axios';
+import InsuranceOptions from '../components/InsuranceOptions';
 
 function CheckoutPage() {
   const location = useLocation();
@@ -14,18 +16,61 @@ function CheckoutPage() {
   const [driverLicense, setDriverLicense] = useState('');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
 
+  // Insurance state
+  const [selectedInsurance, setSelectedInsurance] = useState(null);
+
+  // State for PDF preview
+  const [pdfData, setPdfData] = useState(null);
+  const [isBookingConfirmed, setIsBookingConfirmed] = useState(false);
+
   if (!bookingDetails) {
     return <p>No booking details available.</p>;
   }
 
-  const handleSubmit = (e) => {
+  // Calculate the base total from bookingDetails plus insurance cost (if any)
+  const baseTotal = bookingDetails.totalCost;
+  const insuranceTotal =
+    selectedInsurance && bookingDetails.rentalDuration
+      ? selectedInsurance.dailyCost * bookingDetails.rentalDuration
+      : 0;
+  const grandTotal = baseTotal + insuranceTotal;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!acceptedTerms) {
-      alert("Please accept the terms & conditions to proceed.");
+      alert('Please accept the terms & conditions to proceed.');
       return;
     }
-    alert(`Booking confirmed for ${fullName}!`);
-    navigate('/');
+
+    try {
+      // Optionally, if you want to process the insurance purchase, call Microservice D:
+      if (selectedInsurance) {
+        // Here you would normally send paymentInfo, etc.
+        await axios.post('http://localhost:4003/purchase', {
+          insuranceId: selectedInsurance.id,
+          bookingDetails: { ...bookingDetails, fullName, phone, email, driverLicense },
+          paymentInfo: { /* simulate payment info */ }
+        });
+      }
+      
+      // Generate the booking PDF preview (including insurance info)
+      const pdfResponse = await axios.post(
+        'http://localhost:4002/generate-pdf',
+        { bookingDetails: { ...bookingDetails, fullName, phone, email, driverLicense, insurance: selectedInsurance, grandTotal } },
+        { responseType: 'arraybuffer' } // to get binary data
+      );
+      
+      const base64 = btoa(
+        new Uint8Array(pdfResponse.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
+      );
+      setPdfData(base64);
+      setIsBookingConfirmed(true);
+      alert(`Booking confirmed for ${fullName}! Total: $${grandTotal}`);
+      // Optionally, navigate away if desired: navigate('/');
+    } catch (error) {
+      console.error('Error processing booking:', error);
+      alert('There was an error processing your booking. Please try again.');
+    }
   };
 
   const handleGoBack = () => {
@@ -42,8 +87,12 @@ function CheckoutPage() {
       <div className="booking-summary">
         <p><strong>Car:</strong> {bookingDetails.carName}</p>
         <p><strong>Rental Duration:</strong> {bookingDetails.rentalDuration} days</p>
-        <p><strong>Total Cost:</strong> ${bookingDetails.totalCost}</p>
+        <p><strong>Base Cost:</strong> ${bookingDetails.totalCost}</p>
+        <p><strong>Insurance Cost:</strong> ${insuranceTotal}</p>
+        <p><strong>Grand Total:</strong> ${grandTotal}</p>
       </div>
+
+      <InsuranceOptions rentalDuration={bookingDetails.rentalDuration} onSelect={setSelectedInsurance} />
 
       <div
         className="checkout-content"
@@ -140,6 +189,18 @@ function CheckoutPage() {
           </ul>
         </div>
       </div>
+
+      {isBookingConfirmed && pdfData && (
+        <div style={{ marginTop: '2rem' }}>
+          <h2>Your Booking Confirmation PDF</h2>
+          <iframe
+            title="Booking PDF Preview"
+            src={`data:application/pdf;base64,${pdfData}`}
+            width="100%"
+            height="600px"
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 }
